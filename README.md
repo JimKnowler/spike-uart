@@ -7,7 +7,17 @@ Spiking hardware implementation of UART serial comms.
 - James Sharman, YouTube - [Receive - UART from Scratch](https://www.youtube.com/watch?v=Bqc7YsC1f1Q&t=2s)
 - James Sharman, YouTube -  [Transmit - UART from Scratch](https://www.youtube.com/watch?v=aE5VTp_eMN4)
 
-## requirements
+## Demo
+
+Receive - UART Circuit
+
+[![Receive - UART Circuit](https://github.com/JimKnowler/spike-uart/raw/master/docs/uart-receive..gif)](https://github.com/JimKnowler/spike-uart/raw/master/docs/uart-receive.mp4)
+
+Receive - UART Circuit in Oscilloscope
+
+[![Receive - UART Circuit in Oscilloscope](https://github.com/JimKnowler/spike-uart/raw/master/docs/oscilloscope-receive.gif)](https://github.com/JimKnowler/spike-uart/raw/master/docs/oscilloscope-receive.mp4)
+
+## Requirements
 
 - python3
 
