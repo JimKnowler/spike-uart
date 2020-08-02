@@ -1,7 +1,7 @@
 import serial
 import time
 
-KNIGHTRIDER_TIME_INTERVAL = 0.5         # seconds
+KNIGHTRIDER_TIME_INTERVAL = 0.1         # seconds
 
 def test_write_from_console(ser):
     # read from console, write to port
@@ -29,16 +29,18 @@ def test_write_knightrider(ser):
 
     while True:        
         for i in range(0, 7):
-            c = str(1 << i)
+            b = bytes([1 << i])
+            c = str(b)
             print(c)
-            ser.write(str.encode(c))
-            #time.sleep(KNIGHTRIDER_TIME_INTERVAL)   
+            ser.write(b)
+            time.sleep(KNIGHTRIDER_TIME_INTERVAL)   
 
         for i in reversed(range(1, 8)):
-            c = str(1 << i)
+            b = bytes([1 << i])
+            c = str(b)
             print(c)
-            ser.write(str.encode(c))
-            #time.sleep(KNIGHTRIDER_TIME_INTERVAL)
+            ser.write(b)
+            time.sleep(KNIGHTRIDER_TIME_INTERVAL)
 
 def test_read(ser):
     # read from port, write to console
@@ -69,8 +71,9 @@ def main():
 
         print('port is_open:', ser.is_open)
         
-        #test_write_knightrider(ser)
-        test_write_from_console(ser)
+        test_write_knightrider(ser)
+        #test_write_from_console(ser)
+        #test_write_counter(ser)
         #test_read(ser)
     
 main()
